@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 // 다른 액티비티로 이동
                 val intent = Intent(this, QuizQuestionsActivity::class.java)
+                intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent)
                 finish() //지금 위치는 닫음. 뒤로 가면 앱을 종료함.
             }
